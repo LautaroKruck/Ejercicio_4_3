@@ -1,4 +1,6 @@
 /*
+EJERCICIO 4.3
+
 Actualizar el ejercicio 4.2 para añadir a la clase Persona el siguiente comportamiento:
 
 Debe retornar un saludo con su nombre... saludar():String
@@ -12,7 +14,6 @@ Debe implementar también un método que muestre una descripción completa de la
 "Julia con una altura de 1.72m (Por debajo de la media) y un peso 64.7kg (Por encima de la media) tiene un IMC de 21,87 (peso saludable)".
 2. Crear en el main() una estructura de datos con 4 o 5 personas más, recorrer la estructura y por cada persona debe saludar y mostrar su descripción completa.
 Finalmente, revisa el IDE e intenta actualizar el modificador de visibilidad de los métodos de tu clase cómo os estará indicando... veréis que los métodos que realmente no van a ser llamados desde fuera de la clase te recomienda que sean privados a la misma. De esta manera estamos encapsulando estos métodos para que se puedan utilizar solo desde dentro de la clase y no sean públicos.
-
  */
 
 /**
@@ -24,34 +25,30 @@ fun main(){
     val persona1 = PersonaEjer3(90.55, 1.93)
 
     println("*******************************************")
-    // Modificar el nombre y mostrar la descripción de la persona.
+    // Modifica el nombre y muestra la descripción de la persona.
     persona1.nombre = pideNombreAlUsuario()
     persona1.mostrarDesc()
     println(persona1.obtenerDesc())
     println(persona1.toString())
 
-    // Modificar el peso y mostrar la descripción de la persona.
+    // Modifica el peso y muestra la descripción de la persona.
     persona1.peso = 57.7
     persona1.mostrarDesc()
 
-    // Modificar la altura y mostrar la descripción de la persona.
+    // Modifica la altura y muestra la descripción de la persona.
     persona1.altura = 1.67
     persona1.mostrarDesc()
 
-    // Crear una instancia de Persona con nombre, peso y altura especificados.
+    // Crea un nuevo objeto de Persona con nombre, peso y altura especificados.
     val persona2 = damePersona()
     persona2.mostrarDesc()
 
-    // Crear una instancia de Persona con nombre, altura y peso especificados.
-    // Si cambiamos el orden, debemos especificar el nombre de los parámetros
-    // que reciben los argumentos.
+    // Crea un nuevo objeto de Persona con nombre, altura y peso especificados.
     val persona3 = PersonaEjer3("David", altura = 1.65, peso = 69.50)
     persona3.mostrarDesc()
 
     println("*******************************************")
-    //Cuando mostramos en un print el nombre del objeto de tipo Persona,
-    // por defecto lanza el método toString() de la clase
-    //Esto ocurre también en el resto de tipos de datos...
+
     println("Persona 1: $persona1")
     println("Persona 2: $persona2")
     println("Persona 3: $persona3")
